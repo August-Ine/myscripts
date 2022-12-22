@@ -4,7 +4,7 @@ separated by whitespace, commas, fullstops. em dash'-',underscore'_',newline\n
 
 import returnums(arg) function that takes the string as argument and returns a list of numbers
 
-pending: modify to accept floats !
+pending: modify to accept floats ! done
 '''
 
 
@@ -16,12 +16,12 @@ class stringNums:
     def separatenums(self):
         templist = []
         for i in self.value:
-            if i not in (' ', '-', ',', '.', '_', '//n') and i.isdigit(): #check for separating characters
+            if i not in (' ', '-', ',', '_', '//n') or i.isdigit(): #check for separating characters
                 templist.append(i)
                 continue
             else:
                 if templist:
-                    self.separatedlist.append(int(''.join(templist)))#append the integer form of the string formed by joining the elements of templist
+                    self.separatedlist.append(float(''.join(templist)))#append the integer form of the string formed by joining the elements of templist
                     templist.clear()  # remove all elements from the string list for next iteration(s)
                     continue
                 else:
@@ -37,4 +37,6 @@ def returnums(arg):
     '''
     # thenumstring = input('paste the whitespace, commas, fullstops. em dash'-',underscore\'_\',newline\\n ')
     return stringNums(arg).separatenums()
-# print(returnums('12 34,56,75 43.22 _ 34'))
+
+
+# print(returnums('1.2 34,56,75 43.22 _ 34'))
