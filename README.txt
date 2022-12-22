@@ -1,3 +1,3 @@
-#USEFUL CODE SNIPPETS SAVED IN THIS REPO FOREVER#
+# USEFUL CODE SNIPPETS SAVED IN THIS REPO FOREVER #
 
-**authored by augustine**
+** authored by augustine **
